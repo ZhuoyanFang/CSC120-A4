@@ -56,18 +56,18 @@ public class Engine implements EngineRequirements{
     public Boolean go(){
         if(currentFuelLevel>0){
             currentFuelLevel = currentFuelLevel - 1;
-            System.out.println("The reamining feul is "+this.currentFuelLevel);
+            System.out.println("The remaining feul is "+this.currentFuelLevel);
             return true;
         }else{
             return false;
         }
     }
 
-    // public static void main(String[] args) {
-    //     Engine myEngine = new Engine(FuelType.ELECTRIC, 10.0, 100.0);
-    //     while (myEngine.go()) {
-    //         System.out.println("Choo choo!");
-    //     }
-    //     System.out.println("Out of fuel.");
-    // }
+    public static void main(String[] args) {
+        Engine myEngine = new Engine(FuelType.ELECTRIC, 10.0, 100.0);
+        while (myEngine.go()) {
+            System.out.println("Choo choo!");
+        }
+        System.out.println("Out of fuel.");
+    }
 }
