@@ -17,6 +17,9 @@ public class Train implements TrainRequirements{
     public Train(FuelType fuelType, double currentFuelLevel, double fuelCapacity, int nCars, int passengerCapacity){
         this.engine= new Engine(fuelType,currentFuelLevel,fuelCapacity);
         this.cars= new ArrayList<Car>();
+        for (int i= 0;i<nCars;i++) {
+            cars.add(new Car(passengerCapacity));
+        }
     }
 
     /**
